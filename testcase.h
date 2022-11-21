@@ -6,7 +6,7 @@
 /*   By: sungohki <sungohki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 09:47:49 by sungohki          #+#    #+#             */
-/*   Updated: 2022/11/17 16:39:45 by sungohki         ###   ########.fr       */
+/*   Updated: 2022/11/21 11:09:09 by sungohki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,9 @@
 # include "ft_strjoin.c"
 # include "ft_strtrim.c"
 # include "ft_split.c"
+# include "ft_itoa.c"
+# include "ft_strmapi.c"
+# include "ft_striteri.c"
 
 void	print_all(char *str, size_t size)
 {
@@ -55,4 +58,16 @@ void	print_all(char *str, size_t size)
 	printf("\n");
 }
 
+char	test_strmapi(unsigned int num, char ch)
+{
+	return (num % 2 + ch);
+}
+
+void test_striteri(unsigned int num, char *str)
+{
+	if (str[num] > 'a' && str[num] < 'z')
+		str[num] = str[num] + 'A' - 'a';
+	else if (str[num] > 'A' && str[num] < 'Z')
+		str[num] = str[num] + 'a' - 'A';
+}
 #endif

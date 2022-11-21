@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sungohki <sungohki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 18:15:46 by sungohki          #+#    #+#             */
-/*   Updated: 2022/11/21 11:35:16 by sungohki         ###   ########.fr       */
+/*   Created: 2022/11/21 10:53:55 by sungohki          #+#    #+#             */
+/*   Updated: 2022/11/21 11:08:47 by sungohki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <stdlib.h>
-# include <unistd.h>
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+{
+	unsigned int		len;
+	unsigned int		index;
 
-#endif
+	len = 0;
+	while (s[len])
+		len++;
+	index = 0;
+	while (s[index])
+	{
+		(*f)(index, s);
+		index++;
+	}
+}

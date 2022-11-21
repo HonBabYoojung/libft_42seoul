@@ -1,18 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sungohki <sungohki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 18:15:46 by sungohki          #+#    #+#             */
-/*   Updated: 2022/11/21 11:35:16 by sungohki         ###   ########.fr       */
+/*   Created: 2022/11/21 09:55:25 by sungohki          #+#    #+#             */
+/*   Updated: 2022/11/21 10:47:33 by sungohki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <stdlib.h>
-# include <unistd.h>
+#include "libft.h"
 
-#endif
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+	char			*result;
+	unsigned int	index;
+	unsigned int	len;
+
+	len = 0;
+	while (s[len])
+		len++;
+	result = (char *)malloc(sizeof(char) * (len + 1));
+	if (result == 0)
+		return (0);
+	index = 0;
+	while (s[index])
+	{
+		result[index] = (*f)(index, s[index]);
+		index++;
+	}
+	result[index] = 0;
+	return (result);
+}
