@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	is_set(char const s1, char const *set)
+static int	is_set(char const s1, char const *set)
 {
 	int		index;
 
@@ -37,9 +37,9 @@ char	*ft_trim(char const *s1, char const *set)
 	result = (char *)malloc(sizeof(char) * (len + 1));
 	if (result == 0)
 		return (0);
-	result[len] = 0;
+	result[len--] = 0;
 	while (--index >= 0)
 		if (is_set(s1[index], set) == 1)
-			result[(len--) - 1] = s1[index];
+			result[len--] = s1[index];
 	return (result);
 }
