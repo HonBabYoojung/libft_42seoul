@@ -11,9 +11,8 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "testcase.h"
 
-int	count_words(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
 	int		index;
 	int		count;
@@ -34,7 +33,7 @@ int	count_words(char const *s, char c)
 	return (count);
 }
 
-char	*seperate_word(char const *s, char c)
+static char	*seperate_word(char const *s, char c)
 {
 	char	*result;
 	int		start;
@@ -50,8 +49,8 @@ char	*seperate_word(char const *s, char c)
 	result = (char *)malloc(sizeof(char) * (len + 1));
 	if (result == 0)
 		return (0);
-	result[len] = 000000000;
-	while (--len >= 0)
+	result[len] = 0;
+	while (len--)
 		result[len] = s[start + len];
 	return (result);
 }
