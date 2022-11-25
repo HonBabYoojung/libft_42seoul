@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	*ft_itoa_positive(long n, int is_minus)
+static char	*ft_itoa_positive(long n, int is_minus)
 {
 	char	*result;
 	long	temp;
@@ -28,10 +28,10 @@ char	*ft_itoa_positive(long n, int is_minus)
 	result = (char *)malloc(sizeof(char) * (len + 1));
 	if (result == 0)
 		return (0);
-	result[len--] = 0;
-	while (len >= 0)
+	result[len] = 0;
+	while (len--)
 	{
-		result[len--] = n % 10 + '0';
+		result[len] = n % 10 + '0';
 		n = n / 10;
 	}
 	if (result[0] == '0')
