@@ -6,7 +6,7 @@
 /*   By: sungohki <sungohki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 11:48:15 by sungohki          #+#    #+#             */
-/*   Updated: 2022/11/23 16:07:28 by sungohki         ###   ########.fr       */
+/*   Updated: 2022/11/28 14:08:49 by sungohki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	size_t				index;
 	int					result;
 
-	temp1 = s1;
-	temp2 = s2;
+	temp1 = (const unsigned char *)s1;
+	temp2 = (const unsigned char *)s2;
 	index = 0;
 	result = 0;
 	while (index < n)
