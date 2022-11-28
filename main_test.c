@@ -6,7 +6,7 @@
 /*   By: sungohki <sungohki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 16:06:20 by sungohki          #+#    #+#             */
-/*   Updated: 2022/11/28 17:15:00 by sungohki         ###   ########.fr       */
+/*   Updated: 2022/11/28 18:39:26 by sungohki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -335,26 +335,52 @@ int	main(void)
 	// 		printf("%s\n", test20[i]);
 	// 	}
 	// }
-	// // ft_itoa
-	// printf("\n\n\t -test ft_itoa-\n");
-	// if (1){
-	// 	// int		test10 = -2147483648;
-	// 	int		test10 = -2147483647;
-	// 	printf("before : [%d}\t after : [%s]\n", test10, ft_itoa(test10));
-	// }
+	// ft_itoa
+	printf("\n\n\t -test ft_itoa-\n");
+	if (1){
+		// int		test10 = -2147483648;
+		int		test10 = -2147483647;
+		printf("before : [%d}\t after : [%s]\n", test10, ft_itoa(test10));
+	}
 	// // ft_strmapi
 	// printf("\n\n\t -test ft_strmapi-\n");
 	// if(1){
-		
-	// 	char	test10[] = "hello, world!";	// 13 + 1
+	// 	// char	test10[] = "hello, world!";	// 13 + 1
+	// 	char	test10[] = "abcdefg";	// 13 + 1
 	// 	printf("%s\n", ft_strmapi(test10, test_strmapi));
 	// }
 	// // ft_iteri
 	// printf("\n\n\t -test ft_striteri-\n");
 	// if(1){
-	// 	char	test10[] = "Hello, World!";	// 13 + 1
+	// 	char	test10[] = "Hello, Worldd";	// 13 + 1
 	// 	ft_striteri(test10, test_striteri);
 	// 	printf("%s\n", test10);
+	// }
+	// // ft_putchar_fd
+	// printf("\n\n\t -test ft_putchar_fd-\n");
+	// if(1){
+	// 	char	test10 = 'W';
+	// 	ft_putchar_fd(test10, 1);
+	// }
+	// // ft_putstr_fd
+	// printf("\n\n -test ft_putstr_fd-\n");
+	// if(1)
+	// {
+	// 	char	test10[] = "hello,_world!";
+	// 	ft_putstr_fd(test10, 1);
+	// }
+	// // ft_putendl_fd
+	// printf("\n\n -test ft_putendl_fd-\n");
+	// if(1)
+	// {
+	// 	char	test10[] = "hello,_world!";
+	// 	ft_putendl_fd(test10, 1);
+	// }
+	// // ft_putnbr_fd
+	// printf("\n\n -test ft_putnbr_fd-\n");
+	// if(1){
+	// 	int	test10 = -2147483648;	// int최대값
+	// 	ft_putnbr_fd(test10, 1);
 	// }
 	return (0);
 }

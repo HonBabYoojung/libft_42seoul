@@ -6,7 +6,7 @@
 /*   By: sungohki <sungohki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 12:16:30 by sungohki          #+#    #+#             */
-/*   Updated: 2022/11/28 18:26:06 by sungohki         ###   ########.fr       */
+/*   Updated: 2022/11/28 18:34:54 by sungohki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,3 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr(-(long)n, fd);
 	}
 }
-
-// int	main(void)
-// {
-// }
-// 	int	test10 = -2147483648;
-// 	ft_putnbr_fd(test10, 1);
-// 	return (0);
