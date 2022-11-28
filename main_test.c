@@ -6,7 +6,7 @@
 /*   By: sungohki <sungohki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 16:06:20 by sungohki          #+#    #+#             */
-/*   Updated: 2022/11/21 11:09:29 by sungohki         ###   ########.fr       */
+/*   Updated: 2022/11/28 13:43:11 by sungohki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,24 +63,25 @@ int	main(void)
 	// if(1){
 	// 	char	test1[] = "hello, world!";
 	// 	char	test2[] = "hello, world!";
-	// 	printf("%s, len : %lu\n", test1, strlen(test1));
-	// 	memset(test1, 40, 1);
+	// 	printf("%s, len : %lu\n", test1, strlen(test1) + 1);
+	// 	ft_memset(test1, 126, 14);
 	// 	printf("%s\n", test1);
-	// 	ft_memset(test2, 40, 1);
+	// 	memset(test2, 40, 13);
 	// 	printf("%s\n", test2);
 	// }
 	// // bzero
 	// printf("\n\n\t\t-test bzero-\n");
 	// if(1){
 	// 	char	test1[] = "hello, world!";
+	// 	// char	test3[] = "test3";
 	// 	char	test2[] = "hello, world!";
 	// 	printf("%s, len : %lu\n", test1, strlen(test1));
 	// 	printf("%s, len : %lu\n", test2, strlen(test2));
-	// 	bzero(test1, 14);
+	// 	bzero(test1, 12);
 	// 	for (int i = 0; i < 17; i++)
 	// 		printf("%d ", test1[i]);
 	// 	printf("\n");
-	// 	ft_bzero(test2, 14);
+	// 	ft_bzero(test2, 12);
 	// 	for (int i = 0; i < 17; i++)
 	// 		printf("%d ", test2[i]);
 	// }
@@ -89,48 +90,64 @@ int	main(void)
 	// if(1){
 	// 	char	test1[] = "aaaaaaaaaaaaaaaaaaaa";
 	// 	char	test11[] = "hello,_world!";
-	// 	char	test2[] = "aaaaaaaaaaaaaaaaaaaa";
-	// 	char	test22[] = "hello,_world!";
+	// 	char	test22[] = "my_name_is_o!";
+	// 	char	test20[] = "bbbbbbbbbbbbbbbbbbbbbbbb";
 	// 	printf("%s, len : %lu\n%s, len : %lu\n", test1, strlen(test1), test11, strlen(test11));
-	// 	memcpy(test1, test11, 20);
-	// 	printf("%s\n", test1);
-	// 	ft_memcpy(test2, test22, 15);
-	// 	printf("%s\n", test2);
+	// 	print_all(test1, 24);
+	// 	print_all(test11, 20);
+	// 	memcpy(test1, test11, 10);
+	// 	print_all(test1, 21);
+	// 	ft_memcpy(test1, test22, 20);
+	// 	print_all(test1, 21);
+	// 	memcpy(test11, test20, 23);
+	// 	print_all(test11, 24);
 	// }
 	// // memmove
 	// printf("\n\n\t\t-test memmove-\n");
 	// if(1){
-	// 	char	test1[] = "aaaaaaaaaaaaaaaaaaaa";
-	// 	char	test11[] = "hello,_world!";
-	// 	// char	test2[] = "aaaaaaaaaaaaaaaaaaaa";
-	// 	// char	test22[] = "hello,_world!";
-	// 	// printf("%s, len : %lu\n%s, len : %lu\n", test1, strlen(test1), test11, strlen(test11));
-	// 	printf("%lu\n", (unsigned long)test1 - (unsigned long)test11);
-	// 	ft_memmove(test1, test11, 20);
-	// 	for(size_t i = 0; i < 25 + 1; i++)
-	// 		printf("%4c", test1[i]);
-	// 	printf("\n");
-	// 	for(size_t i = 0; i < 25 + 1; i++)
-	// 		printf("%4d", test1[i]);
+	// 	char	src10[] = "bbbbbbbbbb";
+	// 	char	dst10[] = "aaaaaaa";
+	// 	char	src11[] = "cccccccccc";
+	// 	print_all(src10, strlen(src10) + 5);
+	// 	print_all(dst10, strlen(dst10) + 5);
+	// 	print_all(src11, strlen(src11) + 5);
+	// 	memmove(dst10, src10, 14);
+	// 	print_all(dst10, 20);
+	// 	memmove(dst10, src11, 12);
+	// 	print_all(dst10, 20);
+	// }
+	// printf("\n");
+	// if(1){
+	// 	char	src10[] = "bbbbbbbbbb";
+	// 	char	dst10[] = "aaaaaaa";
+	// 	char	src11[] = "cccccccccc";
+	// 	print_all(src10, strlen(src10) + 5);
+	// 	print_all(dst10, strlen(dst10) + 5);
+	// 	print_all(src11, strlen(src11) + 5);
+	// 	ft_memmove(dst10, src10, 14);
+	// 	print_all(dst10, 20);
+	// 	ft_memmove(dst10, src11, 12);
+	// 	print_all(dst10, 20);
 	// }
 	// // strlcpy
 	// printf("\n\n\t\t-test strlcpy-\n");
 	// if(1){
-	// 	char	test00[] = "\0\0\0\0\0\0\0\0\0\0";
+	// 	char	test00[] = "hellokitty";
+	// 	// char	test00[] = "\0\0\0\0\0\0\0\0\0]";
 	// 	char	test10[] = "0123456789";	//10 + 1
 	// 	char	test11[] = "abcdefghijklmnopqrst"; // 20 + 1
 	// 	char	test12[] = "hello,_world!";	// 13 + 1
 	// 	int		len10 = strlen(test10);
 	// 	int		len11 = strlen(test11);
 	// 	int		len12 = strlen(test12);
-	// 	ft_strlcpy(test00, test12, 11);
-	// 	strlcpy(test10, test12, 12);
-	// 	strlcpy(test11, test12, 20);
+	// 	printf("%lu\n", ft_strlcpy(test00, test12, 1));
+	// 	printf("%lu\n", strlcpy(test10, test12, 15));
+	// 	// printf("%lu\n", strlcpy(test11, test12, 20));
 	// 	// strlcpy(test12, test12, 5);
 	// 	print_all(test00, len10 + 5);
 	// 	print_all(test10, len10 + 5);
 	// 	print_all(test11, len11 + 5);
-	// 	print_all(test12, len12 + 5);
+	// 	print_all(test12, 20);
 	// }
 	// // strlcat
 	// printf("\t\t\n\n-test strlcat-\n");
@@ -144,7 +161,6 @@ int	main(void)
 	// 	printf("%lu\n", len11);
 	// 	print_all(test10, len10 + 5);
 	// 	print_all(test11, len11 + 5);
-
 	// }
 	// // toupper
 	// printf("\t\t\n-test toupper-\n");
@@ -165,8 +181,10 @@ int	main(void)
 	// printf("\n\t\t -test strchr-\n");
 	// if(1){
 	// 	char	test10[100] = "hello,_world!";
-	// 	printf("%s\n", strchr(test10, '!'));
-	// 	printf("%s\n", ft_strchr(test10, '!'));
+	// 	char	tofind = '_';
+	// 	printf("%s\n", strchr(test10, tofind));
+	// 	printf("%s\n", ft_strchr(test10, tofind));
+	// 	printf("%s\n", test10);
 	// }
 	// // strrchr
 	// printf("\n\t\t -test strrchr-\n");
@@ -178,20 +196,20 @@ int	main(void)
 	// 	printf("%s\n", strrchr(test11, 'r'));
 	// 	printf("%s\n", ft_strrchr(test11, 'r'));
 	// }
-	// // strncmp
-	// printf("\n\t\t -test strncmp-\n");
-	// if(1){
-	// 	char	test10[100] = "hello,_world!";
-	// 	char	test11[100] = "hello,_kitty!";
-	// 	char	test12[100] = "hello,_world!";
-	// 	for(int i = 0; i < (int)strlen(test10) + 5; i++)
-	// 		printf("%d ", strncmp(test11, test10, i));
-	// 	printf("\n");
-	// 	for(int i = 0; i < (int)strlen(test10) + 5; i++)
-	// 		printf("%d ", ft_strncmp(test11, test10, i));
-	// 	printf("%d ", strncmp(test10, test12, 15));
-	// 	printf("%d ", ft_strncmp(test10, test12, 15));
-	// }
+	// strncmp
+	printf("\n\t\t -test strncmp-\n");
+	if(1){
+		char	test10[100] = "hello,_world!";
+		char	test11[100] = "hello,_kitty!";
+		char	test12[100] = "hello,_world!";
+		for(int i = 0; i < (int)strlen(test10) + 5; i++)
+			printf("%d ", strncmp(test11, test10, i));
+		printf("\n");
+		for(int i = 0; i < (int)strlen(test10) + 5; i++)
+			printf("%d ", ft_strncmp(test11, test10, i));
+		printf("\n%d ", strncmp(test10, test12, 15));
+		printf("\n%d ", ft_strncmp(test10, test12, 15));
+	}
 	// // memchr
 	// printf("\n\t\t -test memchr-\n");
 	// if(1){
@@ -328,12 +346,12 @@ int	main(void)
 	// 	char	test10[] = "hello, world!";	// 13 + 1
 	// 	printf("%s\n", ft_strmapi(test10, test_strmapi));
 	// }
-	// ft_iteri
-	printf("\n\n\t -test ft_striteri-\n");
-	if(1){
-		char	test10[] = "Hello, World!";	// 13 + 1
-		ft_striteri(test10, test_striteri);
-		printf("%s\n", test10);
-	}
+	// // ft_iteri
+	// printf("\n\n\t -test ft_striteri-\n");
+	// if(1){
+	// 	char	test10[] = "Hello, World!";	// 13 + 1
+	// 	ft_striteri(test10, test_striteri);
+	// 	printf("%s\n", test10);
+	// }
 	return (0);
 }
