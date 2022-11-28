@@ -6,7 +6,7 @@
 /*   By: sungohki <sungohki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 16:06:20 by sungohki          #+#    #+#             */
-/*   Updated: 2022/11/28 14:34:37 by sungohki         ###   ########.fr       */
+/*   Updated: 2022/11/28 17:15:00 by sungohki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -230,8 +230,10 @@ int	main(void)
 	// 	char	test11[] = "hello,_world!";	// 13 + 1
 	// 	// char	test00[] = "hell0";
 	// 	char	test13[] = "hello,_world!";
+	// 	char	test20[] = "";
+	// 	char	test21[] = "";
 	// 	for(int i = 1; i < (int)strlen(test10) + (int)strlen(test12) + (int)strlen(test11); i++)
-	// 		printf("%3d", memcmp(test13, test10, i));
+	// 		printf("%3d", memcmp(test20, test11, i));
 	// 	printf("\n");
 	// 	for(int i = 1; i < (int)strlen(test10) + (int)strlen(test12) + (int)strlen(test11); i++)
 	// 		printf("%3d", ft_memcmp(test13, test10, i));
@@ -240,8 +242,8 @@ int	main(void)
 	// printf("\n\t\t -test strnstr-\n");
 	// if(1){
 	// 	char	test10[] =
-	// 	"hello, my name is sungohki. I am from 42SEOUL 8th La Pisine. Nice to meet you :)";
-	// 	char	test21[] = "~";
+	// 	"hello, my name is sungohki.\0 I am from 42SEOUL 8th La Pisine. Nice to meet you :)";
+	// 	char	test21[] = "42";
 	// 	// char	test21[] = "42SEOUL";
 	// 	for(int i = 0; i < 46; i++){
 	// 		if(strnstr(test10, test21, i) != 0){
@@ -251,19 +253,20 @@ int	main(void)
 	// 	}
 	// 	printf("\n");
 	// 	for(int i = 0; i < 46; i++){
-	// 		if(strnstr(test10, test21, i) != 0){
+	// 		if(ft_strnstr(test10, test21, i) != 0){
 	// 			printf("len : %2d\t%s\n", i, ft_strnstr(test10, test21, i));
 	// 			break;
 	// 		}
 	// 	}
 	// }
-	// atoi
-	printf("\n\t\t -test atoi-\n");
-	if(1){
-		char test10[100] = " \t +001234a4";
-		printf("%d\n", atoi(test10));
-		printf("%d\n", ft_atoi(test10));
-	}
+	// // atoi
+	// printf("\n\t\t -test atoi-\n");
+	// if(1){
+	// 	printf("%d %d\n", INT_MAX, INT_MIN);
+	// 	char test10[100] = " \t +002123748364712323123a4";
+	// 	printf("%d\n", atoi(test10));
+	// 	printf("%d\n", ft_atoi(test10));
+	// }
 	// // calloc
 	// printf("\n\t\t -test calloc-\n");
 	// if(1){
@@ -285,7 +288,7 @@ int	main(void)
 	// 	}
 	// 	printf("|%lu ~ %lu\n", (unsigned long)test12, (unsigned long)&test12[9]);
 	// }
-	// strdup
+	// // strdup
 	// printf("\n\t\t -test strdup- \n");
 	// if(1){
 	// 	char test10[100] = "hello,_world!";		// 13 + 1;

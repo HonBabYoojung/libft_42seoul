@@ -6,7 +6,7 @@
 /*   By: sungohki <sungohki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 09:47:49 by sungohki          #+#    #+#             */
-/*   Updated: 2022/11/21 11:09:09 by sungohki         ###   ########.fr       */
+/*   Updated: 2022/11/28 14:40:22 by sungohki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include<stdio.h>
 # include <ctype.h>
 # include <string.h>
+# include <limits.h>
 # include "testcase.h"
 # include "ft_isalpha.c"
 # include "ft_isdigit.c"
