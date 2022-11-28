@@ -6,7 +6,7 @@
 /*   By: sungohki <sungohki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 16:06:20 by sungohki          #+#    #+#             */
-/*   Updated: 2022/11/28 18:39:26 by sungohki         ###   ########.fr       */
+/*   Updated: 2022/11/28 20:35:37 by sungohki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -323,25 +323,25 @@ int	main(void)
 	// 	printf("test10 (len : %2lu) : [%s]\n", strlen(test10), test10);
 	// 	printf("test20 (len : %2lu) : [%s]\n", strlen(test20), test20);
 	// }
-	// // ft_split
-	// printf("\n\n\t -test ft_split-\n");
-	// if(1){
-	// 	char	test10[] = 
-	// 		"ssscsscssssscsscscss";
-	// 		// "hello, world! My name is sungohki. And you?";	// 8
-	// 	char	**test20 = ft_split(test10, 'c');
-	// 	// print_all(test20[0], 100);
-	// 	for (int i = 0; i < 50; i++){
-	// 		printf("%s\n", test20[i]);
-	// 	}
-	// }
-	// ft_itoa
-	printf("\n\n\t -test ft_itoa-\n");
-	if (1){
-		// int		test10 = -2147483648;
-		int		test10 = -2147483647;
-		printf("before : [%d}\t after : [%s]\n", test10, ft_itoa(test10));
+	// ft_split
+	printf("\n\n\t -test ft_split-\n");
+	if(1){
+		char	test10[] = 
+			// "ssscsscssssscsscscss";
+			"hello, world! My name is sungohki. And you?";	// 8
+		char	**test20 = ft_split(test10, ' ');
+		// print_all(test20[0], 100);
+		while (*test20){
+			printf("%s\n", *(test20++));
+		}
 	}
+	// // ft_itoa
+	// printf("\n\n\t -test ft_itoa-\n");
+	// if (1){
+	// 	// int		test10 = -2147483648;
+	// 	int		test10 = -2147483647;
+	// 	printf("before : [%d}\t after : [%s]\n", test10, ft_itoa(test10));
+	// }
 	// // ft_strmapi
 	// printf("\n\n\t -test ft_strmapi-\n");
 	// if(1){
