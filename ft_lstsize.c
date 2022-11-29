@@ -6,7 +6,7 @@
 /*   By: sungohki <sungohki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 17:08:50 by sungohki          #+#    #+#             */
-/*   Updated: 2022/11/29 18:50:29 by sungohki         ###   ########.fr       */
+/*   Updated: 2022/11/29 19:13:33 by sungohki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_lstsize(t_list *lst)
 	count = 0;
 	if (lst == 0)
 		return (0);
-	while (temp->next != 0)
+	while (temp != 0)
 	{
 		temp = temp->next;
 		count++;
