@@ -6,7 +6,7 @@
 /*   By: sungohki <sungohki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 17:21:42 by sungohki          #+#    #+#             */
-/*   Updated: 2022/11/29 17:27:55 by sungohki         ###   ########.fr       */
+/*   Updated: 2022/11/29 18:55:48 by sungohki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	t_list	*temp;
-
-	temp = lst;
-	lst = lst->next;
-	(*del)(temp->content);
-	free(temp);
+	if (lst == 0 || del == 0)
+		return ;
+	(*del)(lst->content);
+	free(lst);
 }
