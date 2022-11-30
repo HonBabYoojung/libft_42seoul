@@ -6,12 +6,11 @@
 /*   By: sungohki <sungohki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 19:18:40 by sungohki          #+#    #+#             */
-/*   Updated: 2022/11/28 20:34:17 by sungohki         ###   ########.fr       */
+/*   Updated: 2022/11/30 17:17:13 by sungohki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "testcase.h"
 
 static int	count_words(char const *s, char c)
 {

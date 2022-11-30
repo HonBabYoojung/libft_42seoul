@@ -6,19 +6,26 @@
 #    By: sungohki <sungohki@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/07 15:51:25 by sungohki          #+#    #+#              #
-#    Updated: 2022/11/30 16:07:54 by sungohki         ###   ########.fr        #
+#    Updated: 2022/11/30 17:25:19 by sungohki         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-ALL = $(NAME)
 AR = ar
+AROPTS = rcus
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-SOURCES = ft_atoi.c
-#SOURCES = ./ft_atoi.c ./ft_bzero.c ./ft_calloc.c ./ft_i*.c ./ft_mem*.c
-#	./ft_put*.c ./ft_s*.c ./ft_to*.c
-SOURCES_BONUS = ./ft_lst*.c
+SOURCES = ./ft_isalpha.c ./ft_isdigit.c ./ft_isalnum.c ./ft_isascii.c\
+	./ft_isprint.c ./ft_strlen.c ./ft_memset.c ./ft_bzero.c ./ft_memcpy.c\
+	./ft_memmove.c ./ft_strlcpy.c ./ft_strlcat.c ./ft_toupper.c ./ft_tolower.c\
+	./ft_strchr.c ./ft_strrchr.c ./ft_strncmp.c ./ft_memchr.c ./ft_memcmp.c\
+	./ft_strnstr.c ./ft_atoi.c ./ft_calloc.c ./ft_strdup.c\
+	./ft_substr.c ./ft_strjoin.c ./ft_strtrim.c ./ft_split.c ./ft_itoa.c\
+	./ft_strmapi.c ./ft_striteri.c ./ft_putchar_fd.c ./ft_putstr_fd.c\
+	./ft_putendl_fd.c ./ft_putnbr_fd.c
+SOURCES_BONUS = ./ft_lstnew.c ./ft_lstadd_front.c ./ft_lstsize.c ./ft_lstlast.c\
+	./ft_lstadd_back.c ./ft_lstdelone.c ./ft_lstclear.c ./ft_lstiter.c\
+	./ft_lstmap.c
 OBJECTS = $(SOURCES:.c=.o)
 OBJECTS_BONUS = $(OBJECTS) $(SOURCES_BONUS:.c=.o)
 INCLUDES = ./libft.h
@@ -26,21 +33,23 @@ INCLUDES = ./libft.h
 %.o : %.c
 	$(CC) $(CFLAGS) -c $< -o $@ -I $(INCLUDES)
 
+all bonus :
+	$(AR) $(AROPTS) $(NAME) $^
+	rm -f all bonus
+	touch $@
+
 all : $(OBJECTS)
-	$(AR) rcus $(NAME) $^
-	rm -f bonus
-	touch all
 
-bonus : $(OBJECTS_BONUS)
-	$(AR) rcus $(NAME) $^
-	rm -f all
-	touch bonus
+bonus : $(OBJECTS) $(OBJECTS_BONUS)
 
-clean : rm -rf $(OBJECTS)
+clean :
+	rm -f $(OBJECTS) $(OBJECTS_BONUS)
 
 fclean : clean
-	rm -rf all
+	rm -f $(NAME) all bonus
 
 re : fclean all
 
-.PHONY : all bonus clean fclena re
+re_bonus : fclean bonus
+
+.PHONY : all clean fclean re
