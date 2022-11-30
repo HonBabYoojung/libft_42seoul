@@ -6,7 +6,7 @@
 /*   By: sungohki <sungohki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 12:54:53 by sungohki          #+#    #+#             */
-/*   Updated: 2022/11/17 14:25:15 by sungohki         ###   ########.fr       */
+/*   Updated: 2022/11/30 17:52:39 by sungohki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static int	is_set(char const s1, char const *set)
 	return (1);
 }
 
-char	*ft_trim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*result;
 	int		len;
