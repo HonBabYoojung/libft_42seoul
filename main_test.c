@@ -6,7 +6,7 @@
 /*   By: sungohki <sungohki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 16:06:20 by sungohki          #+#    #+#             */
-/*   Updated: 2022/11/28 20:35:37 by sungohki         ###   ########.fr       */
+/*   Updated: 2022/11/30 16:15:19 by sungohki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -210,18 +210,18 @@ int	main(void)
 	// 	printf("\n%d ", strncmp(test10, test12, 15));
 	// 	printf("\n%d ", ft_strncmp(test10, test12, 15));
 	// }
-	// // memchr
-	// printf("\n\t\t -test memchr-\n");
-	// if(1){
-	// 	char	test11[] = "hello,_world!";	// 13 + 1
-	// 	char	test10[] = "asdfasdf";			// 8 + 1
-	// 	int		ch = '\0';
-	// 	printf("%s\n", test11);
-	// 	for(int i = 1; i < (int)strlen(test10) + 20; i++)
-	// 		printf("n : %2d -> %s\t%s\n", i, memchr(test10, ch, i), ft_memchr(test10, ch, i));
-	// 	// for(int i = 0; i < (int)strlen(test10) + 5; i++)
-	// 	// 	printf("i : %d -> %s\n", i, ft_memchr(test10, 'o', i));
-	// }
+	// memchr
+	printf("\n\t\t -test memchr-\n");
+	if(1){
+		char	test11[] = "hello,_world!";	// 13 + 1
+		char	test10[] = "asdfasdf";			// 8 + 1
+		int		ch = '\0';
+		printf("%s\n", test11);
+		for(int i = 1; i < (int)strlen(test10) + 20; i++)
+			printf("n : %2d -> %s\t%s\n", i, memchr(test10, ch, i), ft_memchr(test10, ch, i));
+		// for(int i = 0; i < (int)strlen(test10) + 5; i++)
+		// 	printf("i : %d -> %s\n", i, ft_memchr(test10, 'o', i));
+	}
 	// // memcmp
 	// printf("\n\t\t -test memcmp-\n");
 	// if(1){
@@ -323,18 +323,18 @@ int	main(void)
 	// 	printf("test10 (len : %2lu) : [%s]\n", strlen(test10), test10);
 	// 	printf("test20 (len : %2lu) : [%s]\n", strlen(test20), test20);
 	// }
-	// ft_split
-	printf("\n\n\t -test ft_split-\n");
-	if(1){
-		char	test10[] = 
-			// "ssscsscssssscsscscss";
-			"hello, world! My name is sungohki. And you?";	// 8
-		char	**test20 = ft_split(test10, ' ');
-		// print_all(test20[0], 100);
-		while (*test20){
-			printf("%s\n", *(test20++));
-		}
-	}
+	// // ft_split
+	// printf("\n\n\t -test ft_split-\n");
+	// if(1){
+	// 	char	test10[] = 
+	// 		// "ssscsscssssscsscscss";
+	// 		"hello, world! My name is sungohki. And you?";	// 8
+	// 	char	**test20 = ft_split(test10, ' ');
+	// 	// print_all(test20[0], 100);
+	// 	while (*test20){
+	// 		printf("%s\n", *(test20++));
+	// 	}
+	// }
 	// // ft_itoa
 	// printf("\n\n\t -test ft_itoa-\n");
 	// if (1){
