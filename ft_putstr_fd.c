@@ -6,7 +6,7 @@
 /*   By: sungohki <sungohki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 12:10:16 by sungohki          #+#    #+#             */
-/*   Updated: 2022/11/28 18:08:22 by sungohki         ###   ########.fr       */
+/*   Updated: 2022/12/05 20:42:02 by sungohki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	unsigned int	len;
+	size_t	len;
 
 	len = ft_strlen(s);
-	if (fd >= 0)
-		write(fd, s, (len + 1));
+	write(fd, s, (len + 1));
 }

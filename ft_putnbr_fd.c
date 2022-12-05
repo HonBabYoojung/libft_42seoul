@@ -6,7 +6,7 @@
 /*   By: sungohki <sungohki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 12:16:30 by sungohki          #+#    #+#             */
-/*   Updated: 2022/11/28 18:34:54 by sungohki         ###   ########.fr       */
+/*   Updated: 2022/12/05 20:14:36 by sungohki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static void	ft_putnbr(long n, int fd)
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (n > 0)
+	if (n >= 0)
 		ft_putnbr((long)n, fd);
 	else
 	{
