@@ -6,7 +6,7 @@
 /*   By: sungohki <sungohki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 16:06:20 by sungohki          #+#    #+#             */
-/*   Updated: 2022/12/05 23:58:02 by sungohki         ###   ########.fr       */
+/*   Updated: 2022/12/06 05:13:53 by sungohki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -326,23 +326,23 @@ int	main(void)
 	// 	// printf("%s\n", ft_strjoin(test10, test11));
 	// 	print_all(ft_strjoin(test10, test11), 20);
 	// }
-	// // ft_trim
+	// // ft_strtrim
 	// printf("\n\n\t -test ft_trim-\n");
 	// if(1){
-	// 	char	test10[100] = "hello,_world!";
-	// 	// char	test11[100] = "";
-	// 	char	*test20 = ft_trim(test10, test10);
+	// 	char	test10[100] = "  \t \nhello,\t\n_world!\t\t\n";
+	// 	char	test11[100] = "_ \n\t";
+	// 	char	*test20 = ft_strtrim(test10, test11);
 	// 	printf("test10 (len : %2lu) : [%s]\n", strlen(test10), test10);
 	// 	printf("test20 (len : %2lu) : [%s]\n", strlen(test20), test20);
 	// }
-	// ft_split
+		// ft_split
 	printf("\n\n\t -test ft_split-\n");
 	if(1){
 		char	test10[] = 
-			"\0aa\0bbb";
-			// "ssscsscssssscsscscss";
+			// "\0aa\0bbb";
+			"ssscsscssssscsscscss";
 			// "hello, world! My name is sungohki. And you?";	// 8
-		char	**test20 = ft_split(test10, '\0');
+		char	**test20 = ft_split(test10, 'c');
 		// print_all(test20[0], 100);
 		while (*test20){
 			printf("%s\n", *(test20++));
