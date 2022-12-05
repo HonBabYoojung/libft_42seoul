@@ -6,7 +6,7 @@
 /*   By: sungohki <sungohki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 14:15:55 by sungohki          #+#    #+#             */
-/*   Updated: 2022/11/30 17:15:38 by sungohki         ###   ########.fr       */
+/*   Updated: 2022/12/05 18:32:48 by sungohki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t		index;
 
 	dst_len = ft_strlen(dst);
-	src_len = ft_strlen(dst);
+	src_len = ft_strlen(src);
 	if (dstsize < dst_len + 1)
-		return (dstsize + ft_strlen(src));
+		return (dstsize + src_len);
 	index = 0;
 	while (src[index] != 0 && index + dst_len + 1 < dstsize)
 	{
