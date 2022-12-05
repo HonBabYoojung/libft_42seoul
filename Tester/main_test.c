@@ -6,7 +6,7 @@
 /*   By: sungohki <sungohki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 16:06:20 by sungohki          #+#    #+#             */
-/*   Updated: 2022/11/30 17:35:23 by sungohki         ###   ########.fr       */
+/*   Updated: 2022/12/05 23:58:02 by sungohki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -152,15 +152,25 @@ int	main(void)
 	// // strlcat
 	// printf("\t\t\n\n-test strlcat-\n");
 	// if(1){
-	// 	char	test10[100] = "0123456789";	// 10 + 1
-	// 	char	test11[100] = "_987654321"; // 10 + 1
+	// 	char	test10[100] = "";	// 10 + 1
+	// 	// char	test10[100] = "the cake is a lie !\0I'm hidden lol\r\n";	// 10 + 1
+	// 	char	test11[100] = ""; // 10 + 1
+	// 	// char	test11[100] = "the cake is a lie !\0I'm hidden lol\r\n"; // 10 + 1
+	// 	// char	test12[100] = "";	// 13 + 1
 	// 	char	test12[100] = "hello,_world!";	// 13 + 1
-	// 	size_t	len10 = strlcat(test10, test12, strlen(test10) + 20);
-	// 	size_t	len11 = ft_strlcat(test11, test12, strlen(test11) + 5);
-	// 	printf("%lu\n", len10);
-	// 	printf("%lu\n", len11);
+	// 	size_t	len10 = 
+	// 		// strlcat(((void *) 0), test12, 1);
+	// 		strlcat(test10, test12, strlen(test10) + 5);
+	// 	printf("[%lu]\n", len10);
+	// 	size_t	len11 = 
+	// 		ft_strlcat(((void *) 0), test12, 0);
+	// 		// ft_strlcat(test11, test12, strlen(test11) + 5);
+	// 	printf("[%lu]\n", len11);
+	// 	printf("test10 : [%s]\ntest11 : [%s]\n", test10, test11);
 	// 	print_all(test10, len10 + 5);
+	// 	printf("\n");
 	// 	print_all(test11, len11 + 5);
+	// 	printf("\n");
 	// }
 	// // toupper
 	// printf("\t\t\n-test toupper-\n");
@@ -190,11 +200,13 @@ int	main(void)
 	// printf("\n\t\t -test strrchr-\n");
 	// if(1){
 	// 	char test10[100] = "hello,_\0world!";
-	// 	char test11[100] = "hello,_world!";
-	// 	printf("%s\n", strrchr(test10, '!'));
-	// 	printf("%s\n", ft_strrchr(test10, '!'));
-	// 	printf("%s\n", strrchr(test11, 'r'));
-	// 	printf("%s\n", ft_strrchr(test11, 'r'));
+	// 	char test11[100] = "abbbbbb";
+	// 	char test20 = 0;
+	// 	char test21 = 'a';
+	// 	printf("%s\n", strrchr(test10, test20));
+	// 	printf("%s\n", ft_strrchr(test10, test20));
+	// 	printf("%s\n", strrchr(test11, test21));
+	// 	printf("%s\n", ft_strrchr(test11, test21));
 	// }
 	// // strncmp
 	// printf("\n\t\t -test strncmp-\n");
@@ -210,18 +222,18 @@ int	main(void)
 	// 	printf("\n%d ", strncmp(test10, test12, 15));
 	// 	printf("\n%d ", ft_strncmp(test10, test12, 15));
 	// }
-	// memchr
-	printf("\n\t\t -test memchr-\n");
-	if(1){
-		char	test11[] = "hello,_world!";	// 13 + 1
-		char	test10[] = "asdfasdf";			// 8 + 1
-		int		ch = '\0';
-		printf("%s\n", test11);
-		for(int i = 1; i < (int)strlen(test10) + 20; i++)
-			printf("n : %2d -> %s\t%s\n", i, memchr(test10, ch, i), ft_memchr(test10, ch, i));
-		// for(int i = 0; i < (int)strlen(test10) + 5; i++)
-		// 	printf("i : %d -> %s\n", i, ft_memchr(test10, 'o', i));
-	}
+	// // memchr
+	// printf("\n\t\t -test memchr-\n");
+	// if(1){
+	// 	char	test11[] = "hello,_world!";	// 13 + 1
+	// 	char	test10[] = "asdfasdf";			// 8 + 1
+	// 	int		ch = '\0';
+	// 	printf("%s\n", test11);
+	// 	for(int i = 1; i < (int)strlen(test10) + 20; i++)
+	// 		printf("n : %2d -> %s\t%s\n", i, memchr(test10, ch, i), ft_memchr(test10, ch, i));
+	// 	// for(int i = 0; i < (int)strlen(test10) + 5; i++)
+	// 	// 	printf("i : %d -> %s\n", i, ft_memchr(test10, 'o', i));
+	// }
 	// // memcmp
 	// printf("\n\t\t -test memcmp-\n");
 	// if(1){
@@ -302,7 +314,7 @@ int	main(void)
 	// if(1){
 	// 	char	test10[100] = "hello,_world!";
 	// 	char	*test20 =
-	// 		ft_substr(test10, 14, 0);
+	// 		ft_substr(test10, 4, 4);
 	// 	printf("%s\n", test20);
 	// 	// print_all(test20, strlen(test20) + 4);
 	// }
@@ -323,24 +335,27 @@ int	main(void)
 	// 	printf("test10 (len : %2lu) : [%s]\n", strlen(test10), test10);
 	// 	printf("test20 (len : %2lu) : [%s]\n", strlen(test20), test20);
 	// }
-	// // ft_split
-	// printf("\n\n\t -test ft_split-\n");
-	// if(1){
-	// 	char	test10[] = 
-	// 		// "ssscsscssssscsscscss";
-	// 		"hello, world! My name is sungohki. And you?";	// 8
-	// 	char	**test20 = ft_split(test10, ' ');
-	// 	// print_all(test20[0], 100);
-	// 	while (*test20){
-	// 		printf("%s\n", *(test20++));
-	// 	}
-	// }
+	// ft_split
+	printf("\n\n\t -test ft_split-\n");
+	if(1){
+		char	test10[] = 
+			"\0aa\0bbb";
+			// "ssscsscssssscsscscss";
+			// "hello, world! My name is sungohki. And you?";	// 8
+		char	**test20 = ft_split(test10, '\0');
+		// print_all(test20[0], 100);
+		while (*test20){
+			printf("%s\n", *(test20++));
+		}
+	}
 	// // ft_itoa
 	// printf("\n\n\t -test ft_itoa-\n");
 	// if (1){
 	// 	// int		test10 = -2147483648;
-	// 	int		test10 = -2147483647;
+	// 	int		test10 = -1234;
+	// 	char	*test11 = ft_itoa(-1234);
 	// 	printf("before : [%d}\t after : [%s]\n", test10, ft_itoa(test10));
+	// 	printf("test11 : %s", test11);
 	// }
 	// // ft_strmapi
 	// printf("\n\n\t -test ft_strmapi-\n");
@@ -370,11 +385,12 @@ int	main(void)
 	// 	ft_putstr_fd(test10, 1);
 	// }
 	// // ft_putendl_fd
-	// printf("\n\n -test ft_putendl_fd-\n");
+	// // printf("\n\n -test ft_putendl_fd-\n");
 	// if(1)
 	// {
 	// 	char	test10[] = "hello,_world!";
 	// 	ft_putendl_fd(test10, 1);
+	// 	printf("%s\n", test10);
 	// }
 	// // ft_putnbr_fd
 	// printf("\n\n -test ft_putnbr_fd-\n");
