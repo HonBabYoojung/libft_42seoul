@@ -6,7 +6,7 @@
 /*   By: sungohki <sungohki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 19:18:40 by sungohki          #+#    #+#             */
-/*   Updated: 2022/11/30 18:50:02 by sungohki         ###   ########.fr       */
+/*   Updated: 2022/12/05 23:23:59 by sungohki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +48,12 @@ char	**ft_split(char const *s, char c)
 	int		count;
 	int		index;
 
+	if (s == 0)
+		return (0);
 	index = 0;
 	count = count_words(s, c);
 	result = (char **)malloc(sizeof(char *) * (count + 1));
-	if (result == 0 || s == 0)
+	if (result == 0)
 		return (0);
 	result[count] = 0;
 	while (count-- && *s)
