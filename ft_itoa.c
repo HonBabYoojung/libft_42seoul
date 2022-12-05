@@ -6,7 +6,7 @@
 /*   By: sungohki <sungohki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 09:22:47 by sungohki          #+#    #+#             */
-/*   Updated: 2022/12/05 20:05:00 by sungohki         ###   ########.fr       */
+/*   Updated: 2022/12/05 23:01:16 by sungohki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ char	*ft_itoa(int n)
 	else
 	{
 		result = ft_itoa_positive(-(long)n, 1);
-		if (result[0] == '0')
+		if (result && result[0] == '0')
 			result[0] = '-';
 	}
 	return (result);
