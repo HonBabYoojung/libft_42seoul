@@ -6,40 +6,44 @@
 /*   By: sungohki <sungohki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 12:54:53 by sungohki          #+#    #+#             */
-/*   Updated: 2022/11/30 17:52:39 by sungohki         ###   ########.fr       */
+/*   Updated: 2022/12/06 04:12:23 by sungohki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-static int	is_set(char const s1, char const *set)
+static int	is_not_set(char const s1, char const *set)
 {
-	int		index;
-
-	index = -1;
-	while (set[++index])
-		if (s1 == set[index])
+	while (*set)
+		if (s1 == *(set++))
 			return (0);
 	return (1);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*result;
-	int		len;
-	int		index;
+	char		*result;
+	size_t		start;
+	size_t		end;
+	size_t		len;
 
-	len = 0;
-	index = -1;
-	while (s1[++index])
-		if (is_set(s1[index], set) == 1)
-			len++;
+	if (s1 == 0)
+		return (0);
+	start = 0;
+	end = ft_strlen(s1) - 1;
+	while (is_not_set(s1[start], set) == 0 && s1[start])
+		start++;
+	while (is_not_set(s1[end], set) == 0 && end)
+		end--;
+	len = end - start + 1;
+	if (s1[start] == 0 || *s1 == 0)
+		len = 0;
 	result = (char *)malloc(sizeof(char) * (len + 1));
 	if (result == 0)
 		return (0);
-	result[len--] = 0;
-	while (--index >= 0)
-		if (is_set(s1[index], set) == 1)
-			result[len--] = s1[index];
+	result[len] = 0;
+	while (len--)
+		result[len] = s1[end--];
 	return (result);
 }
