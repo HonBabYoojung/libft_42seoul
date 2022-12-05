@@ -6,7 +6,7 @@
 /*   By: sungohki <sungohki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 09:46:02 by sungohki          #+#    #+#             */
-/*   Updated: 2022/11/23 16:07:12 by sungohki         ###   ########.fr       */
+/*   Updated: 2022/12/05 17:40:55 by sungohki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,20 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
+	unsigned char	*us1;
+	unsigned char	*us2;
 	size_t			index;
 	int				result;
 
 	index = 0;
 	result = 0;
-	while (s1[index] && s2[index] && index < n)
+	us1 = (unsigned char *)s1;
+	us2 = (unsigned char *)s2;
+	while (index < n)
 	{
-		result = (unsigned char)s1[index] - (unsigned char)s2[index];
-		if (result != 0)
-			return (result);
+		result = us1[index] - us2[index];
+		if (result != 0 || (!(us1[index]) || !(us2[index])))
+			break ;
 		index++;
 	}
 	return (result);
