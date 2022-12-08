@@ -6,7 +6,7 @@
 /*   By: sungohki <sungohki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 16:06:20 by sungohki          #+#    #+#             */
-/*   Updated: 2022/12/06 05:13:53 by sungohki         ###   ########.fr       */
+/*   Updated: 2022/12/08 16:52:49 by sungohki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -335,17 +335,27 @@ int	main(void)
 	// 	printf("test10 (len : %2lu) : [%s]\n", strlen(test10), test10);
 	// 	printf("test20 (len : %2lu) : [%s]\n", strlen(test20), test20);
 	// }
-		// ft_split
+	// ft_split
 	printf("\n\n\t -test ft_split-\n");
 	if(1){
 		char	test10[] = 
-			// "\0aa\0bbb";
-			"ssscsscssssscsscscss";
-			// "hello, world! My name is sungohki. And you?";	// 8
-		char	**test20 = ft_split(test10, 'c');
+			"ccc\0aa\0bbb";
+		char	test11[] = 
+			"sss ss sssss ss s ss";
+		char	test12[] =
+			"hello, world! My name is sungohki. And you?";	// 8
+		char	**test20 = ft_split(test10, '\0');
+		char	**test21 = ft_split(test11, ' ');
+		char	**test22 = ft_split(test12, ' ');
 		// print_all(test20[0], 100);
-		while (*test20){
-			printf("%s\n", *(test20++));
+		for (int i = 0; *test20 ; i++){
+			printf("%2d : %s\n", i, *(test20++));
+		}
+		for (int i = 0; *test21 ; i++){
+			printf("%2d : %s\n", i, *(test21++));
+		}
+		for (int i = 0; *test22 ; i++){
+			printf("%2d : %s\n", i, *(test22++));
 		}
 	}
 	// // ft_itoa
