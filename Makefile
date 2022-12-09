@@ -6,7 +6,7 @@
 #    By: sungohki <sungohki@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/07 15:51:25 by sungohki          #+#    #+#              #
-#    Updated: 2022/11/30 17:32:49 by sungohki         ###   ########.fr        #
+#    Updated: 2022/12/09 15:19:51 by sungohki         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,4 +52,4 @@ re : fclean all
 
 re_bonus : fclean bonus
 
-.PHONY : all clean fclean re
+.PHONY : clean fclean re
