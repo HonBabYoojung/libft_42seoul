@@ -6,7 +6,7 @@
 /*   By: sungohki <sungohki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 17:31:52 by sungohki          #+#    #+#             */
-/*   Updated: 2022/12/08 19:09:22 by sungohki         ###   ########.fr       */
+/*   Updated: 2022/12/10 00:33:43 by sungohki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t	index;
 
 	index = 0;
+	if (size != 0 && count > SIZE_MAX / size)
+		return (0);
 	temp = malloc(size * count);
 	if (temp == 0)
 		return (0);
