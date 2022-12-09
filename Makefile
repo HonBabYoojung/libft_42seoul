@@ -6,14 +6,14 @@
 #    By: sungohki <sungohki@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/07 15:51:25 by sungohki          #+#    #+#              #
-#    Updated: 2022/12/09 21:06:22 by sungohki         ###   ########.fr        #
+#    Updated: 2022/12/10 01:41:19 by sungohki         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 AR = ar
 AROPTS = rcus
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 SOURCES = ./ft_isalpha.c ./ft_isdigit.c ./ft_isalnum.c ./ft_isascii.c\
 	./ft_isprint.c ./ft_strlen.c ./ft_memset.c ./ft_bzero.c ./ft_memcpy.c\
