@@ -6,7 +6,7 @@
 /*   By: sungohki <sungohki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 19:18:40 by sungohki          #+#    #+#             */
-/*   Updated: 2022/12/08 18:43:13 by sungohki         ###   ########.fr       */
+/*   Updated: 2022/12/09 21:07:34 by sungohki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,8 @@ static char	*seperate_word(char const *s, char c)
 
 static char	**ft_split_free(char **result, size_t index)
 {
-	while (index)
-		free(result[index--]);
-	free(result[0]);
+	while (index--)
+		free(result[index]);
 	free(result);
 	return (0);
 }
@@ -72,7 +71,7 @@ char	**ft_split(char const *s, char c)
 	{
 		result[index] = seperate_word(s, c);
 		if (result[index] == 0)
-			return (ft_split_free(result, count));
+			return (ft_split_free(result, index));
 		while (*s && *s == c)
 			s++;
 		while (*s && *s != c)
