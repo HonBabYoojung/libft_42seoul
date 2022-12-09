@@ -6,7 +6,7 @@
 /*   By: sungohki <sungohki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 16:06:20 by sungohki          #+#    #+#             */
-/*   Updated: 2022/12/09 22:07:15 by sungohki         ###   ########.fr       */
+/*   Updated: 2022/12/09 23:31:50 by sungohki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -187,28 +187,28 @@ int	main(void)
 	// 			, index, index, tolower(index), ft_tolower(index));
 	// 		// printf("index : %d, origin : %c, tolower : %c\n", index, index, tolower(index));
 	// }
-	// strchr
-	printf("\n\t\t -test strchr-\n");
-	if(1){
-		char	test10[100] = "teste";
-		char	tofind = '\0';
-		printf("[%c][%c]\n", (char)1024, (char)99);
-		printf("origin : [%s]\n", strchr(test10, 1024));
-		printf("myfunc : [%s]\n", ft_strchr(test10, 1024));
-		printf("%s\n", test10);
-	}
+	// // strchr
+	// printf("\n\t\t -test strchr-\n");
+	// if(1){
+	// 	char	test10[100] = "teste";
+	// 	char	tofind = '\0';
+	// 	printf("[%c][%c]\n", (char)1024, (char)99);
+	// 	printf("origin : [%s]\n", strchr(test10, 1024));
+	// 	printf("myfunc : [%s]\n", ft_strchr(test10, 1024));
+	// 	printf("%s\n", test10);
+	// }
 	// strrchr
 	printf("\n\t\t -test strrchr-\n");
 	if(1){
 		char test10[100] = "pepe y cparlos";
-		char test11[100] = "abbbbbb";
+		// char test11[100] = "abbbbbb";
 		char test20 = 'c';
-		char test21 = 'c';
-		printf("s : [%s] c : [%c]\n", test10, test20);
-		printf("origin : [%s]\n", strrchr(test10, test20));
-		printf("myfunc : [%s]\n", ft_strrchr(test10, test20));
-		printf("origin : [%s]\n", strrchr(test11, test21));
-		printf("myfunc : [%s]\n", ft_strrchr(test11, test21));
+		// char test21 = 'c';
+		// printf("s : [%s] c : [%c]\n", test10, test20);
+		// printf("origin : [%s]\n", strrchr(test10, (char)99));
+		printf("myfunc : [%s]\n", ft_strrchr(test10, (char)99));
+		// printf("origin : [%s]\n", strrchr(test11, test21));
+		// printf("myfunc : [%s]\n", ft_strrchr(test11, test21));
 	}
 	// // strncmp
 	// printf("\n\t\t -test strncmp-\n");
