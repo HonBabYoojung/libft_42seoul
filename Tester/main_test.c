@@ -6,7 +6,7 @@
 /*   By: sungohki <sungohki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 16:06:20 by sungohki          #+#    #+#             */
-/*   Updated: 2022/12/09 18:13:43 by sungohki         ###   ########.fr       */
+/*   Updated: 2022/12/09 22:07:15 by sungohki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -187,27 +187,29 @@ int	main(void)
 	// 			, index, index, tolower(index), ft_tolower(index));
 	// 		// printf("index : %d, origin : %c, tolower : %c\n", index, index, tolower(index));
 	// }
-	// // strchr
-	// printf("\n\t\t -test strchr-\n");
-	// if(1){
-	// 	char	test10[100] = "hello,_world!";
-	// 	char	tofind = '_';
-	// 	printf("%s\n", strchr(test10, tofind));
-	// 	printf("%s\n", ft_strchr(test10, tofind));
-	// 	printf("%s\n", test10);
-	// }
-	// // strrchr
-	// printf("\n\t\t -test strrchr-\n");
-	// if(1){
-	// 	char test10[100] = "hello,_\0world!";
-	// 	char test11[100] = "abbbbbb";
-	// 	char test20 = 0;
-	// 	char test21 = 'a';
-	// 	printf("%s\n", strrchr(test10, test20));
-	// 	printf("%s\n", ft_strrchr(test10, test20));
-	// 	printf("%s\n", strrchr(test11, test21));
-	// 	printf("%s\n", ft_strrchr(test11, test21));
-	// }
+	// strchr
+	printf("\n\t\t -test strchr-\n");
+	if(1){
+		char	test10[100] = "teste";
+		char	tofind = '\0';
+		printf("[%c][%c]\n", (char)1024, (char)99);
+		printf("origin : [%s]\n", strchr(test10, 1024));
+		printf("myfunc : [%s]\n", ft_strchr(test10, 1024));
+		printf("%s\n", test10);
+	}
+	// strrchr
+	printf("\n\t\t -test strrchr-\n");
+	if(1){
+		char test10[100] = "pepe y cparlos";
+		char test11[100] = "abbbbbb";
+		char test20 = 'c';
+		char test21 = 'c';
+		printf("s : [%s] c : [%c]\n", test10, test20);
+		printf("origin : [%s]\n", strrchr(test10, test20));
+		printf("myfunc : [%s]\n", ft_strrchr(test10, test20));
+		printf("origin : [%s]\n", strrchr(test11, test21));
+		printf("myfunc : [%s]\n", ft_strrchr(test11, test21));
+	}
 	// // strncmp
 	// printf("\n\t\t -test strncmp-\n");
 	// if(1){
@@ -250,26 +252,31 @@ int	main(void)
 	// 	for(int i = 1; i < (int)strlen(test10) + (int)strlen(test12) + (int)strlen(test11); i++)
 	// 		printf("%3d", ft_memcmp(test13, test10, i));
 	// }
-	// strnstr
+	// // strnstr
 	// printf("\n\t\t -test strnstr-\n");
 	// if(1){
+	// 	size_t	ex = -1;
 	// 	char	*test10 =
 	// 		// (void *)0;
-	// 	"hello, my name is sungohki. I am from 42SEOUL 8th La Pisine. Nice to meet you :)";
+	// 	// "hello, my name is sungohki. I am from 42SEOUL 8th La Pisine. Nice to meet you :)";
+	// 	"aaabcabcd";
 	// 	char	*test21 = 
-	// 		(void *)0;
+	// 	"aabc";
+	// 		// (void *)0;
 	// 		// "42";
 	// 		// "42SEOUL";
-	// 	for(int i = 0; i < 46; i++){
+	// 	printf("%lu\n", ex);
+	// 	printf("haystack : [%s] needle : [%s]\n", test10, test21);
+	// 	for(int i = -1; i < 46; i++){
 	// 		if(strnstr(test10, test21, i) != 0){
-	// 			printf("len : %2d\t%s\n", i, strnstr(test10, test21, i));
+	// 			printf("1 len : %2d\t%s\n", i, strnstr(test10, test21, i));
 	// 			break;
 	// 		}
 	// 	}
 	// 	printf("\n");
-	// 	for(int i = 0; i < 46; i++){
+	// 	for(int i = -1; i < 46; i++){
 	// 		if(ft_strnstr(test10, test21, i) != 0){
-	// 			printf("len : %2d\t%s\n", i, ft_strnstr(test10, test21, i));
+	// 			printf("2 len : %2d\t%s\n", i, ft_strnstr(test10, test21, i));
 	// 			break;
 	// 		}
 	// 	}
@@ -329,17 +336,17 @@ int	main(void)
 	// 	// printf("%s\n", ft_strjoin(test10, test11));
 	// 	print_all(ft_strjoin(test10, test11), 20);
 	// }
-	// ft_strtrim
-	printf("\n\n\t -test ft_trim-\n");
-	if(1){
-		char	test10[] = "                ";
-		char	test11[] = " ";
-		char	*test20 = ft_strtrim(test10, test11);
-		int i = printf("%s\n", test20);
-		printf("%d\n", i);
-	//	printf("test10 (len : %2lu) : [%s]\n", strlen(test10), test10);
-	//	printf("test20 (len : %2lu) : [%s]\n", strlen(test20), test20);
-	}
+	// // ft_strtrim
+	// printf("\n\n\t -test ft_trim-\n");
+	// if(1){
+	// 	char	test10[] = "                ";
+	// 	char	test11[] = " ";
+	// 	char	*test20 = ft_strtrim(test10, test11);
+	// 	int i = printf("%s\n", test20);
+	// 	printf("%d\n", i);
+	// //	printf("test10 (len : %2lu) : [%s]\n", strlen(test10), test10);
+	// //	printf("test20 (len : %2lu) : [%s]\n", strlen(test20), test20);
+	// }
 	// // ft_split
 	// printf("\n\n\t -test ft_split-\n");
 	// if(1){
