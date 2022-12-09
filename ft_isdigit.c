@@ -6,11 +6,9 @@
 /*   By: sungohki <sungohki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 15:53:04 by sungohki          #+#    #+#             */
-/*   Updated: 2022/11/23 16:07:31 by sungohki         ###   ########.fr       */
+/*   Updated: 2022/12/10 00:35:53 by sungohki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isdigit(int c)
 {

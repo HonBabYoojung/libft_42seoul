@@ -6,12 +6,11 @@
 /*   By: sungohki <sungohki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 12:54:53 by sungohki          #+#    #+#             */
-/*   Updated: 2022/12/06 04:12:23 by sungohki         ###   ########.fr       */
+/*   Updated: 2022/12/10 00:42:42 by sungohki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	is_not_set(char const s1, char const *set)
 {
